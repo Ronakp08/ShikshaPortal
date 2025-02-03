@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos - ShikshaPortal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div><p class="logo">ShikshaPortal</p></div>
+    <ul class="navbar-nav">
+      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="pdfs.html">PDFs</a></li>
+      <li class="nav-item"><a href="videos.html">Videos</a></li>
+      <li class="nav-item"><a href="quiz.html">Quiz</a></li>
+    </ul>
+    <div>
+      <button class="login-link" onclick="showLoginPopup()">Login</button>
+      <button class="signup-link" onclick="showSignupPopup()">Sign Up</button>
+    </div>
+  </nav>
+
+  <h3 align="center">"Unlock Knowledge, One Click at a Time – Explore, Learn, and Elevate!" 🚀🎬</h3>
+
+  <div class="video-gallery">
+    <div class="video-item" onclick="openVideo('static/videos/video1.mp4')">
+        <video src="static/videos/video1.mp4" muted></video>
+        <p>Video 1: Introduction to HTML</p>
+    </div>
+    <div class="video-item" onclick="openVideo('static/videos/video2.mp4')">
+        <video src="static/videos/video2.mp4" muted></video>
+        <p>Video 2: Introduction to CSS</p>
+    </div>
+    <div class="video-item" onclick="openVideo('static/videos/video3.mp4')">
+        <video src="static/videos/video3.mp4" muted></video>
+        <p>Video 3: JavaScript Basics</p>
+    </div>
+    <div class="video-item" onclick="openVideo('static/videos/video4.mp4')">
+        <video src="static/videos/video4.mp4" muted></video>
+        <p>Video 4: React.js Overview</p>
+    </div>
+    <div class="video-item" onclick="openVideo('static/videos/video5.mp4')">
+        <video src="static/videos/video5.mp4" muted></video>
+        <p>Video 5: Node.js Introduction</p>
+    </div>
+    <div class="video-item" onclick="openVideo('static/videos/video6.mp4')">
+        <video src="static/videos/video6.mp4" muted></video>
+        <p>Video 6: Database Management</p>
+    </div>
+</div>
+
+<!-- Video Popup -->
+<div id="videoPopup" class="video-popup">
+    <span class="close-btn" onclick="closeVideo()">✖</span>
+    <video id="popupVideo" controls></video>
+</div>
+
+  
+  <div id="popup-container"></div>
+  <script src="script.js" defer></script>
+</body>
+</html>

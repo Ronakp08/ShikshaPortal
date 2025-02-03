@@ -1,0 +1,36 @@
+<div id="login-popup" class="popup" style="display:none;">
+  <span id="close-login" class="close-btn" onclick="closeLoginPopup()">X</span>
+  <h2>Login</h2>
+  <form id="login-form" onsubmit="return loginValidation(event)">
+    <input type="text" id="login-username" placeholder="Username"><br>
+    <input type="password" id="login-password" placeholder="Password"><br>
+    <button type="submit">Login</button>
+  </form>
+</div>
+
+<div id="signup-popup" class="popup">
+  <span id="close-signup" class="close-btn" onclick="closeSignupPopup()">X</span>
+  <h2>Sign Up</h2>
+  <form id="signup-form" onsubmit="return validation(event)">
+    <input type="text" id="firstname" placeholder="Firstname"><br>
+    <input type="text" id="lastname" placeholder="Lastname"><br>
+    <select id="gender" name="Gender" class="option-group">
+      <option value="gender">Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select><br>
+    <input id="email" type="email" placeholder="Email"><br>
+    <select name="city" class="option-group" id="city">
+      <option value="">Select City</option>
+      <option value="ahemdabad">Ahemdabad</option>
+      <option value="surat">Surat</option>
+      <option value="navsari">Navsari</option>
+    </select><br>
+    <input id="password" type="password" placeholder="Password"><br>
+    <input id="confirmpassword" type="password" placeholder="Confirm Password"><br>
+    <button type="submit">Sign Up</button>
+  </form>
+</div>
+
+<script src="script.js"></script>

@@ -1,0 +1,127 @@
+/* General styles for the navbar */
+.navbar {
+    background-color: #343a40; /* Dark background */
+    padding: 10px 20px; /* Add some padding to the navbar */
+}
+
+/* Navbar links */
+.navbar-nav {
+    display: flex; /* Flexbox for alignment */
+    list-style: none; /* Remove default list styling */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+}
+
+.nav-item {
+    margin-right: 20px; /* Spacing between navbar items */
+}
+
+.nav-link {
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Set font size */
+    transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.nav-link:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Optional: Add some styling to the navbar items on larger screens */
+@media (min-width: 768px) {
+    .navbar-nav {
+        justify-content: flex-start; /* Align items to the left */
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-nav {
+        flex-direction: column; /* Stack the items vertically on small screens */
+        align-items: center; /* Center align items */
+    }
+
+    .nav-item {
+        margin-right: 0; /* Remove right margin when stacked */
+        margin-bottom: 10px; /* Add space between vertical items */
+    }
+}
+
+
+
+
+
+
+// Function to load the navbar dynamically
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("navbar-container").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading navbar:", error));
+
+
+
+    /* PDF Container */
+.pdf-container {
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-container h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Grid Layout for PDFs */
+.pdf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* PDF Item Styles */
+.pdf-item {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+
+
+.pdf-details h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.pdf-details p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.pdf-details a {
+  padding: 8px 16px;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.pdf-details a:hover {
+  background-color: #0056b3;
+}
+
+
+/* PDF Modal Styles */

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDFs - ShikshaPortal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div><p class="logo">ShikshaPortal</p></div>
+    <ul class="navbar-nav">
+      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="pdfs.html">PDFs</a></li>
+      <li class="nav-item"><a href="videos.html">Videos</a></li>
+      <li class="nav-item"><a href="quiz.html">Quiz</a></li>
+    </ul>
+    <div>
+      <button class="login-link" onclick="showLoginPopup()">Login</button>
+      <button class="signup-link" onclick="showSignupPopup()">Sign Up</button>
+    </div>
+  </nav>
+
+  <h3 align="center">📚 Explore & Download PDFs</h3>
+
+  <div class="pdf-gallery">
+    <div class="pdf-item" onclick="openPdf('/static/pdfs/AI_STUDY_MATERIAL.pdf')">
+      <img src="./static/images/ai.webp" alt="PDF 1 Thumbnail">
+      <h3>ARTIFICIAL INTELLIGENCE</h3>
+      <p>Get Knowledge about AI.</p>
+      <a href="/static/pdfs/AI_STUDY_MATERIAL.pdf" download>Download</a>
+    </div>
+
+    <div class="pdf-item" onclick="openPdf('/static/pdfs/CD Notes.pdf')">
+      <img src="./static/images/cd.webp" alt="PDF 2 Thumbnail">
+      <h3>Compiler design</h3>
+      <p>Learn basic fundamentals about how compiler is build.</p>
+      <a href="./static/pdfs/CD Notes.pdf" download>Download</a>
+    </div>
+
+    <div class="pdf-item" onclick="openPdf('/static/pdfs/DISTRIBUTED SYSTEM NOTES.pdf')">
+      <img src="./static/images/ds.webp" alt="PDF 3 Thumbnail">
+      <h3>Distributed System</h3>
+      <p>Learn basic fundamentals about how Distributed sytem works.</p>
+      <a href="./static/pdfs/DISTRIBUTED SYSTEM NOTES.pdf" download>Download</a>
+    </div>
+
+    <div class="pdf-item" onclick="openPdf('/static/pdfs/MCWC.pdf')">
+      <img src="./static/images/mcwc.jpeg" alt="PDF 4 Thumbnail">
+      <h3>Mobile Communication and wireless network</h3>
+      <p>Learn basic fundamentals about how Mobile communication works.</p>
+      <a href="./static/pdfs/MCWC.pdf" download>Download</a>
+    </div>
+
+    <div class="pdf-item" onclick="openPdf('/static/pdfs/ML Notes.pdf')">
+      <img src="./static/images/ml.jpeg" alt="PDF 5 Thumbnail">
+      <h3>Machine Learning</h3>
+      <p>Learn basic fundamentals about how Machine Learning Works</p>
+      <a href="./static/pdfs/ML Notes.pdf" download>Download</a>
+    </div>
+
+    <div class="pdf-item" onclick="openPdf('./static/pdfs/Mobile application development.pdf')">
+      <img src="./static/images/android.jpeg" alt="PDF 6 Thumbnail">
+      <h3>Android Development</h3>
+      <p>Learn basic fundamentals about how Android apps build.</p>
+      <a href="./static/pdfs/Mobile application development.pdf" download>Download</a>
+    </div>
+  </div>
+
+  <!-- PDF Viewer Popup -->
+  <div id="pdf-viewer" class="pdf-popup">
+    <span class="close-btn" onclick="closePdf()">✖</span>
+    <iframe id="pdf-frame" src="" frameborder="0"></iframe>
+  </div>
+
+  <div id="popup-container"></div>
+  <script src="script.js" defer></script>
+</body>
+</html>
